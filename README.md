@@ -8,11 +8,14 @@ Empirical evidence has shown that Golden Hamster (Mesocricetus auratus) has been
 
 Each folder possesses the relevant bash / or Rscript and the relevant metadata used in the original analysis of the hamster data. 
 
-Alignment - Performed using STAR (V2.7.2a) (Dobin et al., 2013). Index generation was buit using the combined gemeones of Golden Hamster (NCBI ID:GCA_000215625.1) and the SARS-CoV-2 genomes (NCBI ID: NC_045512.2)(https://www.ncbi.nlm.nih.gov/nuccore/1798174254 for fasta file). Hamster (Mesocricetus auratus) genome and annotation were downloaded from Ensembl (version 100) (ftp://ftp.ensembl.org/pub/release-100/). A gtf file based on the NC_045512.2 entry has been included in this directory.
+### Alignment 
+Performed using STAR (V2.7.2a) (Dobin et al., 2013). Index generation was buit using the combined gemeones of Golden Hamster (NCBI ID:GCA_000215625.1) and the SARS-CoV-2 genomes (NCBI ID: NC_045512.2)(https://www.ncbi.nlm.nih.gov/nuccore/1798174254 for fasta file). Hamster (Mesocricetus auratus) genome and annotation were downloaded from Ensembl (version 100) (ftp://ftp.ensembl.org/pub/release-100/). A gtf file based on the NC_045512.2 entry has been included in this directory.
 
-Differential Expression - DESeq2 (Love et al., 2014) was used. R code for volcano plots and PCA plots is also included.
+### Differential Expression 
+DESeq2 (Love et al., 2014) was used. R code for volcano plots and PCA plots is also included.
 
-Gene Enrichment Analysis- The recent version of Gene Ontology (download on January 2020) was used for all gene enrichment analysis.
+### Gene Enrichment Analysis
+The recent version of Gene Ontology (download on January 2020) was used for all gene enrichment analysis.
 
 ## References:
 
