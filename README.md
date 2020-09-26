@@ -8,11 +8,9 @@ Empirical evidence has shown that Golden Hamster (Mesocricetus auratus) has been
 
 Each folder possesses the relevant bash / or Rscript and the relevant metadata used in the original analysis of the hamster data. 
 
-Alignment - Performed using STAR (V2.7.2a) (Dobin et al., 2013). 
+Alignment - Performed using STAR (V2.7.2a) (Dobin et al., 2013). Index generation was buit using the combined gemeones of Golden Hamster (NCBI ID:GCA_000215625.1) and the SARS-CoV-2 genomes (RefSeq ID; NC_045512.2). A combined GTF and FASTA file are in this directory for this purpose. 
 
-Differential Expression - DESeq2 (Love et al., 2014) was used.
-
-PCA Analysis
+Differential Expression - DESeq2 (Love et al., 2014) was used. R code for volcano plots and PCA plots is also included.
 
 Gene Enrichment Analysis- The recent version of Gene Ontology (download on January 2020) was used for all gene enrichment analysis.
 
