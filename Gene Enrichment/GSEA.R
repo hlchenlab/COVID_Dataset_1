@@ -80,13 +80,13 @@ gene_set_enrichment <- function(genes, genes.labels, voc){
 
 # Step 1: Load the GO matrices and the gene annotation files
 
-load("GO Annotation Jan2020/GO.human.Rdata")
+load("GO.human.Rdata")
 load("gene_annotations_v29.Rdata")
 
 #Step 2: Select GO group by sizes
 
 gosums = colSums(GO.human.nonIEA )
-filtGO = gosums <=200 & gosums>=100 
+filtGO = gosums <=200 & gosums>=100 #Edit these to suit your needs.
 annot =  GO.human.nonIEA[,filtGO]
 
 #Change label sizes:
