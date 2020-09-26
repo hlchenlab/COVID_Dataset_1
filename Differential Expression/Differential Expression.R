@@ -165,9 +165,9 @@ EnhancedVolcano(as.data.frame(res),
 #(Genes identified as differentially expressed are given a score of 1 and those that are not are given a 0)
 
 g = unique(metadata$Condition)[c(3,1,2,4,5)]
-genesets.up = matrix(0,nrow = length(hamster_human$Golden.Hamster.gene.stable.ID), ncol = length(g))
+genesets.up = matrix(0,nrow = length(hamster_human$Gene.stable.ID), ncol = length(g))
 genesets.up = data.frame(genesets.up)
-rownames(genesets.up) = hamster_human$Golden.Hamster.gene.stable.ID
+rownames(genesets.up) = hamster_human$Gene.stable.ID
 for (i in 1:length(g)) {
   group1 = g[i]         #Change if needed
   group2 = "Control"     #Change if needed
@@ -180,5 +180,12 @@ for (i in 1:length(g)) {
   genesets.up[f.t,i] = 1
   colnames(genesets.up)[i] = as.character(g[i])
 }
+
+#Convert to HUMAN IDs!!!!!!
+
+m = match(rownames(genesets.up), hamster_human$Gene.stable.ID)
+f.a = !is.na(m)
+f.t = m[f.a]
+rownames(genesets.up)[f.a] = hamster_human[f.t,]$Human.gene.stable.ID
 
 #genesets.up can be used for GSEA!!!!
