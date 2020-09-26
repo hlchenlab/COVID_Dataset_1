@@ -82,9 +82,9 @@ vsd <- vst(dds, blind = TRUE)
 
 g = unique(metadata$Condition)[c(3,1,2,4,5)]
 myplots = list()
-genesets.up = matrix(0,nrow = length(hamster_human$Gene.stable.ID), ncol = length(g))
+genesets.up = matrix(0,nrow = length(rownames(countdata)), ncol = length(g))
 genesets.up = data.frame(genesets.up)
-rownames(genesets.up) = hamster_human$Gene.stable.ID
+rownames(genesets.up) = rownames(countdata)
 for (i in 1:length(g)) {
   group1 = g[i]
   group2 = "Control"
