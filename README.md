@@ -7,12 +7,17 @@ Empirical evidence has shown that Golden Hamster (Mesocricetus auratus) has been
 ## Description of Contents:
 
 Each folder possesses the relevant bash / or Rscript and the relevant metadata used in the original analysis of the hamster data. 
+
 Alignment - Performed using STAR (V2.7.2a) (Dobin et al., 2013). 
+
 Differential Expression - DESeq2 (Love et al., 2014) was used.
+
 PCA Analysis
+
 Gene Enrichment Analysis- The recent version of Gene Ontology (download on January 2020) was used for all gene enrichment analysis.
 
 ## References:
 
 DOBIN, A., DAVIS, C. A., SCHLESINGER, F., DRENKOW, J., ZALESKI, C., JHA, S., BATUT, P., CHAISSON, M. & GINGERAS, T. R. 2013. STAR: ultrafast universal RNA-seq aligner. Bioinformatics (Oxford, England), 29, 15-21.
+
 LOVE, M. I., HUBER, W. & ANDERS, S. 2014. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. Genome Biology, 15, 550.
