@@ -161,4 +161,24 @@ EnhancedVolcano(as.data.frame(res),
     theme(legend.position = "bottom",
           legend.title = element_blank())
   
+#Make data.frame for GSEA Analysis of DEGs from differential Expression. 
+#(Genes identified as differentially expressed are given a score of 1 and those that are not are given a 0)
 
+g = unique(metadata$Condition)[c(3,1,2,4,5)]
+genesets.up = matrix(0,nrow = length(hamester_mouse$Golden.Hamster.gene.stable.ID), ncol = length(g))
+genesets.up = data.frame(genesets.up)
+rownames(genesets.up) = hamester_mouse$Golden.Hamster.gene.stable.ID
+for (i in 1:length(g)) {
+  group1 = g[i]         #Change if needed
+  group2 = "Control"     #Change if needed
+  res <- results(dds, contrast = c("Condition", group1, group2), pAdjustMethod = "BH")
+  res <- na.omit(res, cols = c("log2FoldChange", "padj"))
+  res <- res[res$log2FoldChange >= 1 & res$padj <= 0.05,]   #Alter this depending on your decided DE Thresholds!!!!!!!!!!!
+  m =match(rownames(res), rownames(genesets.up))
+  f.a = !is.na(m)
+  f.t =m[f.a]
+  genesets.up[f.t,i] = 1
+  colnames(genesets.up)[i] = as.character(g[i])
+}
+
+#genesets.up can be used for GSEA!!!!
