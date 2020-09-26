@@ -1,0 +1,12 @@
+gene-GU280_gp01	ORF1ab
+gene-GU280_gp02	S
+gene-GU280_gp03	ORF3a
+gene-GU280_gp04	E
+gene-GU280_gp05	M
+gene-GU280_gp06	ORF6
+gene-GU280_gp07	ORF7a
+gene-GU280_gp08	ORF7b
+gene-GU280_gp09	ORF8
+gene-GU280_gp10	N
+gene-GU280_gp11	ORF10
+
