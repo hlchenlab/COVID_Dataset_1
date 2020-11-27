@@ -118,7 +118,7 @@ for (i in 1:n){
   genes = genes[f.a]
   resMG = gene_set_enrichment(genes, annot, voc[filt,])
   filt2 = resMG[,"padj"] <= 0.05
-  res[[i]] = resMG
+  res[[i]] = resMG[filt2,]
 }
 n = length(res)
 TFterms = matrix(0,nrow = nrow(voc), ncol = n)
